@@ -1,10 +1,12 @@
 const { app, BrowserWindow, shell, Menu } = require("electron");
+const path = require("path");
 
 function createWindow() {
   const win = new BrowserWindow({
     width: 1280,
     height: 800,
     title: "Photopea",
+    icon: path.join(__dirname, "build", "icon.png"),
     autoHideMenuBar: true,
     show: false,
     webPreferences: {
